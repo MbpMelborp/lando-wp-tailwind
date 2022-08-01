@@ -8,3 +8,6 @@ lando init \
 lando restart
 lando start
 lando stop
+
+lando db-export wp.sql
+lando db-import wp.sql
