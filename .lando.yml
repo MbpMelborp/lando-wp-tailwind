@@ -1,0 +1,4 @@
+name: wp-test
+recipe: wordpress
+config:
+  webroot: wordpress
