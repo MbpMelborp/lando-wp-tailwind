@@ -26,4 +26,7 @@
 	<?php wp_body_open(); ?>
 
 	<div id="page">
-		<?php get_template_part('template-parts/layout/header', 'content'); ?>
+		<?php
+		if (get_page_template_slug() != "page-blank.php") {
+			get_template_part('template-parts/layout/header', 'content');
+		} ?>

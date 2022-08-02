@@ -15,7 +15,16 @@
 		<div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
 			<div class="flex items-center justify-between">
 				<div>
-					<a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Brand</a>
+					<a class="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="<?php echo esc_url(home_url('/')); ?>">
+						<?php
+						$custom_logo_id = get_theme_mod('custom_logo');
+						$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+						if (has_custom_logo()) {
+							echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" class="h-12">';
+						} else {
+							echo  get_bloginfo('name');
+						} ?></a>
 				</div>
 
 				<!-- Mobile menu button -->
@@ -30,11 +39,17 @@
 
 			<!-- Mobile Menu open: "block", Menu closed: "hidden" -->
 			<div class="items-center md:flex">
-				<div class="flex flex-col md:flex-row md:mx-6">
-					<a class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">Home</a>
-					<a class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">Shop</a>
-					<a class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">Contact</a>
-					<a class="my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0" href="#">About</a>
+				<div>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'container_class' => 'flex flex-col md:flex-row md:mx-6',
+							'menu_class' => 'my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+						)
+					);
+					?>
 				</div>
 
 				<div class="flex justify-center md:block">
@@ -49,37 +64,5 @@
 			</div>
 		</div>
 	</nav>
-	<div>
-		<?php
-		the_custom_logo();
-		if (is_front_page()) :
-		?>
-			<h1><?php bloginfo('name'); ?> <span>
-					Hello world
-				</span></h1>
-		<?php
-		else :
-		?>
-			<p><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-		<?php
-		endif;
-		$testp_description = get_bloginfo('description', 'display');
-		if ($testp_description || is_customize_preview()) :
-		?>
-			<p><?php echo $testp_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-				?></p>
-		<?php endif; ?>
-	</div>
-
-	<nav id="site-navigation">
-		<button aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'testp'); ?></button>
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			)
-		);
-		?>
-	</nav><!-- #site-navigation -->
+	<!-- #site-navigation -->
 </header><!-- #masthead -->

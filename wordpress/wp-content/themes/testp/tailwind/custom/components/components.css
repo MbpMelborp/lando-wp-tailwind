@@ -21,7 +21,7 @@
  * `postcss.config.js` file for details.
  */
 $(post-title-selector) {
-	@apply mx-auto mb-6 max-w-content text-3xl font-extrabold text-neutral-900;
+	@apply mb-6 text-3xl font-extrabold text-neutral-900;
 }
 
 /**
@@ -41,18 +41,33 @@ $(post-title-selector) {
 $(post-content-selector) {
 	@apply prose prose-neutral max-w-none prose-a:text-primary;
 }
-
-/* Content width from the `theme.json` file */
+#page-wrap {
+	@apply container mx-auto flex space-x-4 py-4 px-6;
+}
+#primary {
+	@apply md:w-8/12;
+}
+#primary:only-child {
+	@apply w-full;
+}
+#secondary {
+	@apply w-full md:w-4/12;
+}
+.testpre {
+	@apply my-8 bg-gray-400 p-4 text-green-500;
+}
+/* Content width from the `theme.json` file 
 .entry-content > * {
 	@apply mx-auto max-w-content;
 }
 
-/* Wide width from the `theme.json` file */
+
 .entry-content > .alignwide {
 	@apply max-w-wide;
 }
 
-/* Full width */
+
 .entry-content > .alignfull {
 	@apply max-w-none;
 }
+*/

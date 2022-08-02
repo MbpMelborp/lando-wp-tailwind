@@ -186,3 +186,10 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
+
+function testpre($obj)
+{
+	echo '<pre class="testpre">';
+	print_r($obj);
+	echo '</pre>';
+}

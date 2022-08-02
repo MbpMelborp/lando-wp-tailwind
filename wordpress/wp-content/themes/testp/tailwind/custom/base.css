@@ -14,9 +14,3 @@
 body {
 	@apply bg-background font-sans text-foreground;
 }
-h1 {
-	@apply text-6xl font-bold;
-	span {
-		@apply text-yellow text-2xl;
-	}
-}
