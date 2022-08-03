@@ -1,0 +1,9 @@
+{
+  "id": "container",
+  "icon": "{themeUrl}/assets/img/icons/Container.svg",
+  "displayName": "Container",
+  "category": "Layout",
+  "tag": "div",
+  "classNames": "px-4 max-w-screen-lg mx-auto",
+  "allowChildren": true
+}

@@ -1,0 +1,93 @@
+{
+  "id": "postCard",
+  "icon": "{themeUrl}/assets/img/icons/Card.svg",
+  "displayName": "Post Card",
+  "category": "Posts",
+  "tag": "div",
+  "children": [
+    {
+      "tag": "div",
+      "id": "postCardImageWrap",
+      "classNames": "relative h-32 bg-gray-100",
+      "children": [
+        {
+          "tag": "img",
+          "id": "postCardImage",
+          "classNames": "absolute left-0 top-0 w-full h-full object-cover object-center",
+          "attributes": [
+            {
+              "type": "function",
+              "name": "src",
+              "value": "get_the_post_thumbnail_url"
+            },
+            {
+              "type": "function",
+              "name": "alt",
+              "value": "get_the_title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "div",
+      "id": "postCardContentWrap",
+      "classNames": "p-2 border bg-white",
+      "children": [
+        {
+          "tag": "h2",
+          "id": "postCardHeading",
+          "classNames": "font-bold text-3xl",
+          "children": [
+            {
+              "tag": "a",
+              "id": "postCardHeadingLink",
+              "content": {
+                "type": "function",
+                "value": "get_the_title"
+              },
+              "attributes": [
+                {
+                  "type": "function",
+                  "name": "href",
+                  "value": "get_the_permalink"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": "postCardExcerpt",
+          "content": {
+            "type": "function",
+            "value": "get_the_excerpt"
+          },
+          "classNames": "my-2"
+        },
+        {
+          "tag": "div",
+          "id": "postCardReadMoreWrap",
+          "children": [
+            {
+              "id": "postCardReadMore",
+              "tag": "a",
+              "content": {
+                "type": "value",
+                "value": "Read more"
+              },
+              "classNames": "underline",
+              "attributes": [
+                {
+                  "type": "function",
+                  "name": "href",
+                  "value": "get_the_permalink"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

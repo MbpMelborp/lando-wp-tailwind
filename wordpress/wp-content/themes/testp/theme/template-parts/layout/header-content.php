@@ -39,19 +39,16 @@
 
 			<!-- Mobile Menu open: "block", Menu closed: "hidden" -->
 			<div class="items-center md:flex">
-				<div>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'container_class' => 'flex flex-col md:flex-row md:mx-6',
-							'menu_class' => 'my-1 text-sm font-medium text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
-						)
-					);
-					?>
-				</div>
-
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'container_class' => 'top-menu',
+						'menu_class' => ''
+					)
+				);
+				?>
 				<div class="flex justify-center md:block">
 					<a class="relative text-gray-700 transition-colors duration-200 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300" href="#">
 						<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

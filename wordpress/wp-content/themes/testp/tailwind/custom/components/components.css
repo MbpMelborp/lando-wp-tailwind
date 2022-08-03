@@ -56,6 +56,18 @@ $(post-content-selector) {
 .testpre {
 	@apply my-8 bg-gray-400 p-4 text-green-500;
 }
+#primary-menu {
+	@apply mr-2;
+	ul {
+		@apply flex space-x-4;
+		li {
+			@apply mr-2;
+			a {
+				@apply text-sm text-blue-600 hover:text-gray-900;
+			}
+		}
+	}
+}
 /* Content width from the `theme.json` file 
 .entry-content > * {
 	@apply mx-auto max-w-content;

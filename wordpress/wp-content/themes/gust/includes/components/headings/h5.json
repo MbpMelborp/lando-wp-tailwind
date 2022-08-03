@@ -1,0 +1,12 @@
+{
+  "id": "h5",
+  "icon": "{themeUrl}/assets/img/icons/H5.svg",
+  "displayName": "Heading 5",
+  "category": "Headings",
+  "tag": "h4",
+  "classNames": "font-bold text-lg",
+  "content": {
+    "type": "value",
+    "value": "Heading 5"
+  }
+}

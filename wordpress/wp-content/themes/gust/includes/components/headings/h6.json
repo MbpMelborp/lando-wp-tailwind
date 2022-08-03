@@ -1,0 +1,12 @@
+{
+  "id": "h6",
+  "icon": "{themeUrl}/assets/img/icons/H6.svg",
+  "displayName": "Heading 6",
+  "category": "Headings",
+  "tag": "h6",
+  "classNames": "font-bold",
+  "content": {
+    "type": "value",
+    "value": "Heading 6"
+  }
+}

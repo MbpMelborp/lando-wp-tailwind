@@ -1,0 +1,24 @@
+{
+  "id": "iconRow",
+  "icon": "{themeUrl}/assets/img/icons/Icon Row.svg",
+  "displayName": "Icon Row",
+  "tag": "div",
+  "category": "Layout",
+  "classNames": "grid grid-cols-1p5-auto gap-4",
+  "children": [
+    {
+      "id": "iconRowIconCell",
+      "tag": "div",
+      "allowChildren": true
+    },
+    {
+      "id": "iconRowContentCell",
+      "tag": "div",
+      "allowChildren": true,
+      "content": {
+        "type": "value",
+        "value": "Icon row content, drag and drop your icon into the space on the left."
+      }
+    }
+  ]
+}

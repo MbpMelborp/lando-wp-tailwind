@@ -1,0 +1,35 @@
+{
+  "id": "anchor",
+  "icon": "{themeUrl}/assets/img/icons/Anchor.svg",
+  "displayName": "Link / Anchor",
+  "category": "Content",
+  "classNames": "hover:opacity-80",
+  "tag": "a",
+  "allowChildren": true,
+  "options": [
+    {
+      "name": "Link",
+      "label": "href",
+      "modify": "attribute",
+      "attributeName": "href",
+      "type": "text"
+    },
+    {
+      "name": "target",
+      "label": "Open in new tab?",
+      "modify": "attribute",
+      "attributeName": "target",
+      "type": "select",
+      "options": [
+        {
+          "label": "This tab",
+          "value": ""
+        },
+        {
+          "label": "New tab",
+          "value": "_blank"
+        }
+      ]
+    }
+  ]
+}

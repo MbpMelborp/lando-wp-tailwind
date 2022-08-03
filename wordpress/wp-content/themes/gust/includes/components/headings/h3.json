@@ -1,0 +1,12 @@
+{
+  "id": "h3",
+  "icon": "{themeUrl}/assets/img/icons/H3.svg",
+  "displayName": "Heading 3",
+  "category": "Headings",
+  "tag": "h3",
+  "classNames": "font-bold text-2xl",
+  "content": {
+    "type": "value",
+    "value": "Heading 3"
+  }
+}
